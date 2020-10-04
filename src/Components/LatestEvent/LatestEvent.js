@@ -6,16 +6,26 @@ const LatestEvent = () => {
         <div className="container">
             <Header></Header>
 
-            <div className="row card p-5">
+            <div className="row card p-5" >
                 <div className="col-md-4">
-                    <img src="https://i.imgur.com/gZAH8P3.png" className="card-img" alt="" />
+                    <img src="https://i.ibb.co/bQ8CSf8/extra-Volunteer.png" className="card-img" alt="" />
                 </div>
                 <div className="col-md-4">
-                    <h1>Humanity More</h1>
-                    <h3>Date:</h3>
+                    <h3>Humanity More</h3>
+                    <h5>29 sep, 2020</h5>
                 </div>
                 <div className="col-md-4">
-                    <button className="btn btn-secondary">Cancel</button>
+                    <button className="btn btn-light">Cancel</button>
+                </div>
+                <div className="col-md-4">
+                    <img src="https://i.ibb.co/bQ8CSf8/extra-Volunteer.png" className="card-img" alt="" />
+                </div>
+                <div className="col-md-4">
+                    <h3>Humanity More</h3>
+                    <h5>29 sep, 2020</h5>
+                </div>
+                <div className="col-md-4">
+                    <button className="btn btn-light">Cancel</button>
                 </div>
             </div>
 

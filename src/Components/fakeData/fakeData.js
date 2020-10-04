@@ -1,4 +1,4 @@
-const eventData = [
+const fakeData = [
     { 
         name: 'Animal Shelter',
         img: 'https://i.ibb.co/GFTRLjV/animal-Shelter.png'
@@ -94,4 +94,4 @@ const eventData = [
         img: 'https://i.ibb.co/2t6v14q/vote-Register.png'
     }
 ];
-export default eventData;
+export default fakeData;

@@ -3,10 +3,14 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebaseConfig';
 import logo from '../../logos/logo.png';
+import Gl from '../../logos/google.png';
 import './Login.css';
 
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
+
+
+firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -15,9 +19,9 @@ const Login = () => {
 
     let { from } = location.state || { from: { pathname: "/"} };
 
-    if(firebase.apps.length === 0){
-        firebase.initializeApp(firebaseConfig);
-    }
+    // if(firebase.apps.length === 0){
+    //     firebase.initializeApp(firebaseConfig);
+    // }
     const handleGoogleSignIn = () => {
         var googleProvider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(googleProvider).then(function(result) {
@@ -31,6 +35,7 @@ const Login = () => {
             var errorCode = error.code;
             var errorMessage = error.message;
             var email = error.email;
+            var credential = error.credential;
 
 
           });
@@ -44,8 +49,9 @@ const Login = () => {
                 <div className="form-element">
                     <h3>Login with</h3>
 
-                    <button type="submit" className="btn btn-outline-success col-md-12 ">Continue With Google</button>
-                    <p>Don't have an account? <a href="#">create an account.</a></p>
+                    <button onClick={handleGoogleSignIn} type="submit" className="btn btn-outline-info"> <img src={Gl} alt="" width="20px"/>Continue With Google</button>
+                    <br/>
+                    <p>Don't have an account?<span style={{color:"red", textDecoration: "underline"}}>create an account.</span></p>
                 </div>
             </form>
 

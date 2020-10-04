@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../Header/Header';
-import VolunteerEvents from '../VolunteerEvents/VolunteerEvent';
+import VolunteerEvent from '../VolunteerEvent/VolunteerEvent';
 import './Home.css';
 
 
@@ -21,7 +21,7 @@ const Home = () => {
             </div>
 
             <div className="volunteer-events container">
-                <VolunteerEvents></VolunteerEvents>
+                <VolunteerEvent></VolunteerEvent>
             </div>
 
         </main>

@@ -9,7 +9,6 @@ const Header = () => {
 
         <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
-                {/* <a className="navbar-brand" href="#">Navbar</a> */}
 
                 <a className="navbar-brand" href="/home">
                     <img src={logo} alt="" />
@@ -22,15 +21,16 @@ const Header = () => {
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <a className="nav-link" href="/home">Home <span className="sr-only">(current)</span></a>
-                            {/* <a className="nav-link" href="/home">Home</a> */}
                         </li>
+
                         <li className="nav-item">
                             <a className="nav-link" href="#">Donation</a>
                         </li>
+
                         <li className="nav-item">
-                            {/* <Link to="/selectedEvent"><a className="nav-link" href="#">Events</a></Link> */}
-                            <a className="nav-link" href="/selectedEvent">Events</a>
+                            <a className="nav-link" href="/latestEvent">Events</a>
                         </li>
+
                         <li className="nav-item">
                             <a className="nav-link" href="#">Blog</a>
                         </li>

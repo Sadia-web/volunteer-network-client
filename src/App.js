@@ -24,41 +24,41 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
-    <Switch>
+      <Switch>
 
-<Route path="/home">
-  <Home></Home>
-</Route>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
 
-<Route path="/eventRegistration">
-  <EventRegistration />
-</Route>
+        <Route path="/eventRegistration">
+          <EventRegistration />
+        </Route>
 
-<Route path="/login">
-  <Login></Login>
-</Route>
+        <Route path="/login">
+          <Login></Login>
+        </Route>
 
-<Route path="/latestEvent">
-  <LatestEvent></LatestEvent>
-</Route>
+        <Route path="/latestEvent">
+          <LatestEvent></LatestEvent>
+        </Route>
 
-<Route path="/admin">
-  <Admin></Admin>
-</Route>
+        <Route path="/admin">
+          <Admin></Admin>
+        </Route>
 
-<Route path="/addEvent">
-  <AddEvents></AddEvents>
-</Route>
+        <Route path="/addEvents">
+          <AddEvents></AddEvents>
+        </Route>
 
-<Route exact path="/">
-  <Home></Home>
-</Route>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
 
-<Route exact path="*">
-  <NoMatch></NoMatch>
-</Route>
+        <Route exact path="*">
+          <NoMatch></NoMatch>
+        </Route>
 
-</Switch>
+      </Switch>
     </Router>
     </UserContext.Provider>
   );

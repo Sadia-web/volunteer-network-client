@@ -28,7 +28,7 @@ const EventRegistration = () => {
                 </div>
 
                 {/* <button type="submit" className="btn btn-primary col-md-12">Registration</button> */}
-                <Link to='/selectedEvent'><button type="submit" className="btn btn-primary col-md-12">Registration</button></Link>
+                <Link to='/latestEvent'><button type="submit" className="btn btn-primary col-md-12">Registration</button></Link>
             </form>
 
         </div>

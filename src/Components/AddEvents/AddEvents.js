@@ -2,7 +2,7 @@ import React from 'react';
 import './AddEvents.css';
 import logo from '../../logos/logo.png';
 
-import eventData from '../fakeData/eventData';
+import fakeData from '../fakeData/fakeData';
 
 // insert event to mongodb database
 const handleAddEvent = () => {
@@ -11,7 +11,7 @@ const handleAddEvent = () => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(eventData[0])
+        body: JSON.stringify(fakeData[0])
 
     })
     console.log('event added!');
