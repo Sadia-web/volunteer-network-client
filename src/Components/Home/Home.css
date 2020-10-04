@@ -1,0 +1,14 @@
+main{
+    background: linear-gradient(rgba(255, 255, 255, 0.801), rgba(255, 255, 255, 0.918)), url('../../images/libraryBooks.png');
+    /* background: url('../../images/home-header-bg.png'); */
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.volunteer-events{
+    margin-top: 100px;
+}

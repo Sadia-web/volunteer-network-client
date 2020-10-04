@@ -1,0 +1,17 @@
+.navbar-brand img{
+    width: 202px;
+    height: 60px;
+    /* border-radius: 10px; */
+}
+
+
+.navbar .navbar-nav .nav-item .nav-link:link, .navbar .navbar-nav .nav-item .nav-link:visited  {
+    /* color: black; */
+    margin-right: 50px;
+    font-weight: bold;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link:active  {
+    /* border-bottom: 1px solid lightgrey; */
+    margin-right: 50px;
+    color: #009dc4;
+}
