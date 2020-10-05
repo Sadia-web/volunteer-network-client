@@ -6,10 +6,8 @@ import { Link, useParams } from 'react-router-dom';
 const VolunteerEvent = () => {
     const { _id } = useParams();
 
-    // const event = allEvent;
     const [works, setWorks] = useState([])
 
-    // load events data from API
     useEffect(() => {
         fetch('https://thawing-wildwood-78896.herokuapp.com/works')
             .then(res => res.json())

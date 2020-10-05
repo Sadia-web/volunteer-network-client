@@ -1,4 +1,3 @@
-  
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
@@ -22,21 +21,18 @@ const Header = () => {
                         <li className="nav-item">
                             <a className="nav-link" href="/home">Home <span className="sr-only">(current)</span></a>
                         </li>
-
                         <li className="nav-item">
                             <a className="nav-link" href="/home">Donation</a>
                         </li>
-
                         <li className="nav-item">
                             <a className="nav-link" href="/latestEvent">Events</a>
                         </li>
-
                         <li className="nav-item">
                             <a className="nav-link" href="/home">Blog</a>
                         </li>
 
                     </ul>
-                    <Link to="/eventRegistration"><button type="button" className="btn btn-primary mr-2">Register</button></Link>
+                    <Link to="/login"><button type="button" className="btn btn-primary mr-2">Register</button></Link>
                     <br />
                     <Link to="/admin"><button type="button" className="btn btn-dark">Admin</button></Link>
                 </div>

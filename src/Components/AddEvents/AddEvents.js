@@ -1,27 +1,31 @@
 import React from 'react';
-import './AddEvents.css';
 import logo from '../../logos/logo.png';
 import user from '../../logos/user.png';
 import plus from '../../logos/plus.png';
 
-import fakeData from '../fakeData/fakeData';
 
-// insert event to mongodb database
-const handleAddEvent = () => {
-    fetch("https://thawing-wildwood-78896.herokuapp.com/addWork", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(fakeData[0])
 
-    })
-    console.log('event added!');
-}
+
 
 
 const AddEvents = () => {
+
+
+    const addNewEvent = data => {
+        console.log('add new event', data);
+        fetch('https://thawing-wildwood-78896.herokuapp.com/addEvent', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json;',
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => console.log('Called successfully'))
+    };
+
     return (
+
         <div className="container-fluid">
             <div className="row admin-navbar">
 
@@ -31,21 +35,21 @@ const AddEvents = () => {
                     </a>
 
                     <ul className="dashboard-menu ">
-                        <li><a href="/admin"><img src={user} alt="" width="20px"/>Volunteer register list</a></li>
-                        <li><a href="/addEvent"><img src={plus} alt="" width="20px"/>Add event</a></li>
+                        <p><a href="/admin"><img src={user} alt="" width="20px"/>Volunteer register list</a></p>
+                        <p><a href="/addEvent"><img src={plus} alt="" width="20px"/>Add event</a></p>
                     </ul>
-
+                  
                 </div>
 
                 <div className="col-md-9" style={{ height: '100vh', background: '#F4F7FC' }}>
                     <h3>Volunteer register list</h3>
 
-                    <div className="bg-white p-5 " >
-                        <form action="">
+                    <div className="bg-white p-5 " onsubmit="return false">
+                        <form >
                             <div className="row">
                                 <div className="col form-group">
                                     <label htmlFor="title">Event Title</label>
-                                    <input type="text" id="title" className="form-control bg-light" placeholder="Event title" required />
+                                    <input type="text" id="title" name="title" className="form-control bg-light" placeholder="Event title" />
                                 </div>
                                 <div className="col form-group">
                                     <label htmlFor="date">Event Date</label>
@@ -63,14 +67,17 @@ const AddEvents = () => {
                                 </div>
                             </div>
                             <div className="row d-flex justify-content-end">
-                                <input onClick={() => handleAddEvent} type="submit" value="Submit" className="btn btn-primary " />
+                                <input onClick={() => addNewEvent} type="submit" value="Submit" className="btn btn-primary " />
                             </div>
                         </form>
+
                     </div>
                 </div>
 
             </div>
         </div >
+
+
     );
 };
 

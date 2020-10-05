@@ -39,9 +39,9 @@ function App() {
           <Login></Login>
         </Route>
 
-        <PrivateRoute path="/latestEvent">
+        <Route path="/latestEvent">
           <LatestEvent></LatestEvent>
-        </PrivateRoute>
+        </Route>
 
         <Route path="/admin">
           <Admin></Admin>
@@ -55,7 +55,7 @@ function App() {
           <Home></Home>
         </Route>
 
-        <Route exact path="*">
+        <Route path="*">
           <NoMatch></NoMatch>
         </Route>
 
