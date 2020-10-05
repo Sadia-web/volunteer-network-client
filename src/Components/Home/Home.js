@@ -1,5 +1,4 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import Header from '../Header/Header';
 import VolunteerEvent from '../VolunteerEvent/VolunteerEvent';
 import './Home.css';
@@ -12,7 +11,7 @@ const Home = () => {
         <main>
             <Header></Header>
             <div className="container mt-5 text-center">
-                <h1>I GROW BY HELPING PEOPLE IN NEED.</h1>
+                <h1>I GROW BY HELPING PEOPLE IN NEED</h1>
 
                 <form className="form-inline d-flex justify-content-center mt-4">
                     <input className="form-control mr-sm-2 w-50" type="search" placeholder="Search..." aria-label="Search" />

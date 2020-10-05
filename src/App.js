@@ -13,6 +13,7 @@ import EventRegistration from './Components/EventRegistration/EventRegistration'
 import LatestEvent from './Components/LatestEvent/LatestEvent';
 import AddEvents from './Components/AddEvents/AddEvents';
 import Admin from './Components/Admin/Admin';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 export const UserContext = createContext();
@@ -30,17 +31,17 @@ function App() {
           <Home></Home>
         </Route>
 
-        <Route path="/eventRegistration">
+        <PrivateRoute path="/eventRegistration/:_id">
           <EventRegistration />
-        </Route>
+        </PrivateRoute>
 
         <Route path="/login">
           <Login></Login>
         </Route>
 
-        <Route path="/latestEvent">
+        <PrivateRoute path="/latestEvent">
           <LatestEvent></LatestEvent>
-        </Route>
+        </PrivateRoute>
 
         <Route path="/admin">
           <Admin></Admin>

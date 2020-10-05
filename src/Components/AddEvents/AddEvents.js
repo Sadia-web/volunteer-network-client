@@ -1,12 +1,14 @@
 import React from 'react';
 import './AddEvents.css';
 import logo from '../../logos/logo.png';
+import user from '../../logos/user.png';
+import plus from '../../logos/plus.png';
 
 import fakeData from '../fakeData/fakeData';
 
 // insert event to mongodb database
 const handleAddEvent = () => {
-    fetch("http://localhost:5000/addWork", {
+    fetch("https://thawing-wildwood-78896.herokuapp.com/addWork", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -29,8 +31,8 @@ const AddEvents = () => {
                     </a>
 
                     <ul className="dashboard-menu ">
-                        <li><a href="/admin">Volunteer register list</a></li>
-                        <li><a href="/addEvent">Add event</a></li>
+                        <li><a href="/admin"><img src={user} alt="" width="20px"/>Volunteer register list</a></li>
+                        <li><a href="/addEvent"><img src={plus} alt="" width="20px"/>Add event</a></li>
                     </ul>
 
                 </div>

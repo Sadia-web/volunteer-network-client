@@ -18,7 +18,7 @@ const Admin = () => {
 
                     <ul className="dashboard-menu ">
                         <p><a href="/admin"> <img src={user} alt="" width="20px"/>Volunteer register list</a></p>
-                        <p><a href="/addEvent"> <img src={plus} alt="" width="20px"/>Add event</a></p>
+                        <p><a href="/addEvents"> <img src={plus} alt="" width="20px"/>Add event</a></p>
                     </ul>
 
                 </div>
