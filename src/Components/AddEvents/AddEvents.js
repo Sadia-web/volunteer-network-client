@@ -3,7 +3,7 @@ import logo from '../../logos/logo.png';
 import user from '../../logos/user.png';
 import plus from '../../logos/plus.png';
 
-
+//import fakeData from '../fakeData/fakeData';
 
 
 

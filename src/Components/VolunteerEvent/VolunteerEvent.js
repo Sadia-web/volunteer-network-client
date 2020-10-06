@@ -9,7 +9,7 @@ const VolunteerEvent = () => {
     const [works, setWorks] = useState([])
 
     useEffect(() => {
-        fetch('https://thawing-wildwood-78896.herokuapp.com/works')
+        fetch('https://thawing-wildwood-78896.herokuapp.com/allWorks')
             .then(res => res.json())
             .then(data => setWorks(data))
     }, [])
